@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
@@ -5,12 +6,10 @@ const http = require('http')
 const cors = require('cors')
 const {routes} = require('./src/routes')
 //bd connection
-mongoose.connect(
-    'mongodb://localhost:27017/naturesecure',
-    {
+mongoose.connect(process.env.MONGO_URL, {
 
     }
-)
+);
 //inizialization
 const app = express()
 app.use(cors());

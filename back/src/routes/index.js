@@ -1,3 +1,3 @@
 module.exports = {
-    routes : ["categories","posts"],
+    routes : ["categories","posts",'auth'],
 };
